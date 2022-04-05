@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Stop Smoking</string>
+    <string name="progress_label">Progress</string>
+    <string name="trophies_label">Trophies</string>
+    <string name="rewards_label">Rewards</string>
+    <string name="msg_no_trophy">No trophy</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
