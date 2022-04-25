@@ -3,13 +3,32 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/zinedine/Documents/stop-smoking/stop-smoking/app/src/main/res/drawable/ic_add.xml" value="0.3671875" />
         <entry key="..\:/Users/zinedine/Documents/stop-smoking/stop-smoking/app/src/main/res/drawable/ic_arrow_back.xml" value="0.2640625" />
         <entry key="..\:/Users/zinedine/Documents/stop-smoking/stop-smoking/app/src/main/res/drawable/ic_card_giftcard.xml" value="0.2640625" />
+        <entry key="..\:/Users/zinedine/Documents/stop-smoking/stop-smoking/app/src/main/res/drawable/ic_money_off.xml" value="0.3671875" />
+        <entry key="..\:/Users/zinedine/Documents/stop-smoking/stop-smoking/app/src/main/res/drawable/ic_monitor_heart.xml" value="0.3671875" />
+        <entry key="..\:/Users/zinedine/Documents/stop-smoking/stop-smoking/app/src/main/res/drawable/ic_more_vert.xml" value="0.2640625" />
+        <entry key="..\:/Users/zinedine/Documents/stop-smoking/stop-smoking/app/src/main/res/drawable/ic_person.xml" value="0.2640625" />
+        <entry key="..\:/Users/zinedine/Documents/stop-smoking/stop-smoking/app/src/main/res/drawable/ic_plus.xml" value="0.3671875" />
+        <entry key="..\:/Users/zinedine/Documents/stop-smoking/stop-smoking/app/src/main/res/drawable/ic_save.xml" value="0.3671875" />
+        <entry key="..\:/Users/zinedine/Documents/stop-smoking/stop-smoking/app/src/main/res/drawable/ic_smoking.xml" value="0.3671875" />
+        <entry key="..\:/Users/zinedine/Documents/stop-smoking/stop-smoking/app/src/main/res/drawable/ic_trending_up.xml" value="0.2640625" />
+        <entry key="..\:/Users/zinedine/Documents/stop-smoking/stop-smoking/app/src/main/res/drawable/ic_trophy.xml" value="0.2640625" />
         <entry key="..\:/Users/zinedine/Documents/stop-smoking/stop-smoking/app/src/main/res/drawable/ic_warning.xml" value="0.3671875" />
+        <entry key="..\:/Users/zinedine/Documents/stop-smoking/stop-smoking/app/src/main/res/drawable/stats_full.xml" value="0.3671875" />
+        <entry key="..\:/Users/zinedine/Documents/stop-smoking/stop-smoking/app/src/main/res/drawable/stats_progress.xml" value="0.3671875" />
         <entry key="..\:/Users/zinedine/Documents/stop-smoking/stop-smoking/app/src/main/res/layout/activity_main.xml" value="0.19479166666666667" />
         <entry key="..\:/Users/zinedine/Documents/stop-smoking/stop-smoking/app/src/main/res/layout/activity_menu.xml" value="0.23385416666666667" />
+        <entry key="..\:/Users/zinedine/Documents/stop-smoking/stop-smoking/app/src/main/res/layout/activity_profile.xml" value="0.2" />
+        <entry key="..\:/Users/zinedine/Documents/stop-smoking/stop-smoking/app/src/main/res/layout/edit_reward.xml" value="0.20104166666666667" />
+        <entry key="..\:/Users/zinedine/Documents/stop-smoking/stop-smoking/app/src/main/res/layout/fragment_health.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/zinedine/Documents/stop-smoking/stop-smoking/app/src/main/res/layout/fragment_progress.xml" value="0.22" />
+        <entry key="..\:/Users/zinedine/Documents/stop-smoking/stop-smoking/app/src/main/res/layout/fragment_reward.xml" value="0.24791666666666667" />
         <entry key="..\:/Users/zinedine/Documents/stop-smoking/stop-smoking/app/src/main/res/layout/fragment_trophy.xml" value="0.3328804347826087" />
         <entry key="..\:/Users/zinedine/Documents/stop-smoking/stop-smoking/app/src/main/res/layout/no_elements.xml" value="0.3328804347826087" />
+        <entry key="..\:/Users/zinedine/Documents/stop-smoking/stop-smoking/app/src/main/res/layout/recycler_health_item.xml" value="0.36302083333333335" />
+        <entry key="..\:/Users/zinedine/Documents/stop-smoking/stop-smoking/app/src/main/res/layout/recycler_reward_item.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/zinedine/Documents/stop-smoking/stop-smoking/app/src/main/res/layout/recycler_trophy_item.xml" value="0.3328804347826087" />
         <entry key="..\:/Users/zinedine/Documents/stop-smoking/stop-smoking/app/src/main/res/layout/toolbar.xml" value="0.24791666666666667" />
         <entry key="..\:/Users/zinedine/Documents/stop-smoking/stop-smoking/app/src/main/res/menu/buttom_navigation_menu.xml" value="0.24791666666666667" />

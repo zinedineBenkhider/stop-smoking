@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity
-            android:name=".MenuActivity"
+            android:name=".home.activity.ProfileActivity"
             android:exported="false" />
         <activity
             android:name=".home.MainActivity"

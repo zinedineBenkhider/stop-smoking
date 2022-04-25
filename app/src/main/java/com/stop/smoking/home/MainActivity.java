@@ -1,42 +1,56 @@
 package com.stop.smoking.home;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageButton;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.stop.smoking.MenuActivity;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.stop.smoking.R;
+import com.stop.smoking.home.activity.ProfileActivity;
+import com.stop.smoking.home.fragment.HealthFragment;
 import com.stop.smoking.home.fragment.ProgressFragment;
+import com.stop.smoking.home.fragment.RewardFragment;
 import com.stop.smoking.home.fragment.TrophyFragment;
 
-public class MainActivity extends MenuActivity {
-
+public class MainActivity extends AppCompatActivity {
     private BottomNavigationView bottom_navigation;
-
+    private FloatingActionButton buttonAddReward;
+    Fragment selectedFragment = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         bottom_navigation = findViewById(R.id.bottom_navigation);
+        buttonAddReward= findViewById(R.id.btn_new_award_activity_main);
+        buttonAddReward.setVisibility(View.GONE);
         bottom_navigation.setOnNavigationItemSelectedListener(listener);
         configureToolbar();
-        Fragment fragment = TrophyFragment.newInstance();
+        Fragment fragment = ProgressFragment.newInstance();
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
-
+        buttonAddReward.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RewardFragment rewardFragment=(RewardFragment)selectedFragment;
+                rewardFragment.showCreateRewardDialog();
+            }
+        });
     }
 
     BottomNavigationView.OnNavigationItemSelectedListener listener = new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            Fragment selectedFragment = null;
+            buttonAddReward.setVisibility(View.GONE);
             switch (item.getItemId()) {
                 case (R.id.trophy_nav_item):
                     selectedFragment = TrophyFragment.newInstance();
@@ -45,7 +59,11 @@ public class MainActivity extends MenuActivity {
                     selectedFragment = ProgressFragment.newInstance();
                     break;
                 case (R.id.reward_nav_item):
-                    selectedFragment = TrophyFragment.newInstance();
+                    selectedFragment = RewardFragment.newInstance();
+                    buttonAddReward.setVisibility(View.VISIBLE);
+                    break;
+                case (R.id.health_nav_item):
+                    selectedFragment = HealthFragment.newInstance();
                     break;
             }
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
@@ -53,6 +71,21 @@ public class MainActivity extends MenuActivity {
         }
     };
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_profile) {
+            Intent intent = new Intent(this, ProfileActivity.class);
+            this.startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     private void configureToolbar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

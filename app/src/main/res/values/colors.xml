@@ -10,5 +10,6 @@
     <color name="bg_color">#DCDCDC</color>
     <color name="colorPrimaryDark">#FFE3217B</color>
     <color name="colorPrimary">#FFE3217B</color>
-
+    <color name="progress">#2196F3</color>
+    <color name="completed">#4CAF50</color>
 </resources>

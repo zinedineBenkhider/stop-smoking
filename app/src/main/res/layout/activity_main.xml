@@ -6,6 +6,7 @@
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".home.MainActivity">
+
     <include layout="@layout/toolbar"></include>
     <FrameLayout
         android:id="@+id/fragment_container"
@@ -14,6 +15,14 @@
         android:background="@color/bg_color"
         android:layout_marginTop="?attr/actionBarSize"
         android:layout_above="@+id/bottom_navigation">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_new_award_activity_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="10dp"
+            android:contentDescription="@string/app_name"
+            app:srcCompat="@drawable/ic_add" />
     </FrameLayout>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -23,4 +32,5 @@
         app:menu="@menu/buttom_navigation_menu"
         android:background="@color/white"
         />
+
 </RelativeLayout>

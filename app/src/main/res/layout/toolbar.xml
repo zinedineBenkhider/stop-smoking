@@ -19,7 +19,7 @@
                 android:id="@+id/back_btn_tool_bar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_arrow_back"
+                android:src="@drawable/ic_close"
                 android:background="@color/colorPrimary"
                 android:padding="10dp"
                 />
