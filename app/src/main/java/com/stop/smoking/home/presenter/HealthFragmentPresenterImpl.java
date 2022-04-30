@@ -2,14 +2,17 @@ package com.stop.smoking.home.presenter;
 
 import com.stop.smoking.home.presenter.interfaces.HealthFragmentContract;
 import com.stop.smoking.home.presenter.model.Health;
+import com.stop.smoking.home.repository.ProfileRepository;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class HealthFragmentPresenterImpl implements HealthFragmentContract.HealthFragmentPresenter {
+
    private HealthFragmentContract.HealthFragmentView mainView;
     public HealthFragmentPresenterImpl(HealthFragmentContract.HealthFragmentView mainView){
         this.mainView=mainView;
+
     }
 
     @Override

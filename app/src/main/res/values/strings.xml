@@ -33,13 +33,35 @@
         <item name="EUR">EUR - EURO</item>
         <item name="GBP">GBP - Livre britanique</item>
     </string-array>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="positive_messages">
+        <item name="one">I choose a healthy life!</item>
+        <item name="two">I control my life!</item>
+        <item name="three">I\'m free not to smoke!</item>
+        <item name="fore">I can accomplish anything!</item>
+    </string-array>
+
     <string name="devise">Devise</string>
-    <string name="price_per_pack">Prix par packet</string>
-    <string name="years_of_smoking">Années de tabagisme</string>
-    <string name="cigarettes_per_pack">Cigarettes dans un packet</string>
-    <string name="cigarette_per_day">Cigarettes par jour</string>
+    <string name="price_per_pack">Price per pack</string>
+    <string name="years_of_smoking">Years of smoking</string>
+    <string name="cigarettes_per_pack">Cigarettes in a packet</string>
+    <string name="cigarette_per_day">Cigarettes per day</string>
     <string name="save_profile">Save profile</string>
     <string name="field_required">Field required</string>
     <string name="msg_required_fields_empty">You forgot to fill in one or more required fields.</string>
+    <string name="day">Day</string>
+    <string name="days">Days</string>
+    <string name="non_smoker">Non-smoker</string>
+    <string name="the_money_saved">The money saved</string>
+    <string name="recovered_life_expectancy">Recovered life expectancy</string>
+    <string name="unsmoked_cigarettes">Unsmoked cigarettes</string>
+    <string name="during_the_time_you_smoked">During the time you smoked:</string>
+    <string name="smoked_cigarettes">Smoked Cigarettes</string>
+    <string name="money_spent">Money Spent</string>
+    <string name="life_lost">life lost</string>
+    <string name="what_accept_in_return">What do you accept in return?</string>
+    <string name="money_and_life_expectancy">Money and Life Expectancy</string>
+    <string name="name">Name</string>
+    <string name="price">Price</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
 </resources>

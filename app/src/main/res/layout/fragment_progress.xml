@@ -38,7 +38,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="16dp"
                             android:layout_marginTop="10dp"
-                            android:text="Jour 16"
+                            android:text="@string/day"
                             android:textSize="18sp"
                             app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
                             app:layout_constraintHorizontal_bias="0.5"
@@ -84,20 +84,25 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="40dp"
-                                android:text="12 jours"
+                                android:text="@string/days"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                                 app:layout_constraintBottom_toBottomOf="@+id/progress_bar"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/progress_percent_text_view" />
-                            <TextView
-                                android:id="@+id/positive_message_text_view"
-                                android:layout_width="wrap_content"
+                            <com.tomer.fadingtextview.FadingTextView
+                                android:id="@+id/fadingTextView"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Je choisie une vie sein"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
                                 app:layout_constraintBottom_toBottomOf="@+id/progress_bar"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent" />
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:timeout="2000"
+                                app:texts="@array/positive_messages" />
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <ImageButton
@@ -114,6 +119,7 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
                         android:background="@color/bg_color" />
 
                     <LinearLayout
@@ -150,7 +156,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="5dp"
-                                android:text="Non-fumeur"
+                                android:text="@string/non_smoker"
                                 android:textSize="12sp" />
 
                         </LinearLayout>
@@ -187,7 +193,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="5dp"
-                                android:text="L'argent économisé"
+                                android:text="@string/the_money_saved"
                                 android:textSize="12sp" />
                         </LinearLayout>
 
@@ -236,7 +242,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="5dp"
-                                android:text="Espérence de vie récupérée"
+                                android:text="@string/recovered_life_expectancy"
                                 android:textSize="12sp" />
 
                         </LinearLayout>
@@ -274,7 +280,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="5dp"
-                                android:text="Cigarette non fumées"
+                                android:text="@string/unsmoked_cigarettes"
                                 android:textSize="12sp" />
                         </LinearLayout>
                     </LinearLayout>
@@ -300,7 +306,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="16dp"
                         android:textColor="@color/black"
-                        android:text="Pendant la périod ou vous avez fumé:"
+                        android:text="@string/during_the_time_you_smoked"
                         >
                     </TextView>
                     <LinearLayout
@@ -330,7 +336,7 @@
                                 android:layout_marginTop="5dp"
                                 android:textColor="@color/black"
                                 android:textSize="12dp"
-                                android:text="Cigarettes Fumées">
+                                android:text="@string/smoked_cigarettes">
                             </TextView>
                         </LinearLayout>
                     </LinearLayout>
@@ -361,7 +367,7 @@
                                 android:layout_marginTop="5dp"
                                 android:textColor="@color/black"
                                 android:textSize="12dp"
-                                android:text="L'argent Dépensé">
+                                android:text="@string/money_spent">
                             </TextView>
                         </LinearLayout>
                     </LinearLayout>
@@ -392,7 +398,7 @@
                                 android:layout_marginTop="5dp"
                                 android:textColor="@color/black"
                                 android:textSize="12dp"
-                                android:text="Vie Perdue">
+                                android:text="@string/life_lost">
                             </TextView>
                         </LinearLayout>
                     </LinearLayout>
@@ -420,7 +426,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="16dp"
                         android:textColor="@color/black"
-                        android:text="Qu'est-ce que vous obtiendrez en retour?"
+                        android:text="@string/what_accept_in_return"
                         >
                     </TextView>
                     <TextView
@@ -430,7 +436,7 @@
                         android:layout_marginTop="3dp"
                         android:textSize="12dp"
                         android:textColor="@color/black"
-                        android:text="D'Argent et d'Espérance de Vie"
+                        android:text="@string/money_and_life_expectancy"
                         >
                     </TextView>
                 <LinearLayout
