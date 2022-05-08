@@ -10,6 +10,7 @@
         <item name="actionOverflowButtonStyle">@style/OverFlowButtonStyle</item>
     </style>
 
+
     <!--  <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">-->
     <!-- Color of the title text in the Toolbar -->
     <!--  <item name="android:textColorPrimary">#FFFFFF</item>-->
@@ -32,6 +33,11 @@
         <item name="android:indeterminateOnly">false</item>
         <item name="android:progressDrawable">@drawable/stats_progress</item>
     </style>
+    <style name="DialogDateTheme" parent="ThemeOverlay.AppCompat.Dialog">
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
 
+    </style>
 
 </resources>

@@ -1,8 +1,10 @@
 package com.stop.smoking.home.adapter;
 
+import android.app.Application;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -12,20 +14,20 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.stop.smoking.R;
 import com.stop.smoking.home.presenter.interfaces.RewardActionInterface;
-import com.stop.smoking.home.presenter.interfaces.TrophiesActionInterface;
-import com.stop.smoking.home.presenter.model.Reward;
-import com.stop.smoking.home.presenter.model.Trophy;
+import com.stop.smoking.home.presenter.model.RewardModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class RewardAdapter extends RecyclerView.Adapter<RewardAdapter.RewardViewHolder> {
-    private List<Reward> rewardList;
+    private List<RewardModel> rewardList;
     private static RewardActionInterface rewardActionInterface;
+    private static Application application;
 
-    public RewardAdapter(RewardActionInterface rewardActionInterface) {
+    public RewardAdapter(RewardActionInterface rewardActionInterface, Application application) {
         this.rewardList = new ArrayList<>();
-        this.rewardActionInterface = rewardActionInterface;
+        RewardAdapter.rewardActionInterface = rewardActionInterface;
+        RewardAdapter.application=application;
     }
 
     @Override
@@ -46,15 +48,19 @@ public class RewardAdapter extends RecyclerView.Adapter<RewardAdapter.RewardView
         return rewardList.size();
     }
 
-    public void bindViewModel(Reward reward) {
+    public void bindViewModel(RewardModel reward) {
         this.rewardList.add(reward);
         notifyDataSetChanged();
     }
 
+    public void emptyData() {
+        this.rewardList=new ArrayList<>();
+    }
     public static class RewardViewHolder extends RecyclerView.ViewHolder {
         private TextView nameTextView,priceTextView, percentTextView,statusTextView;
         private ProgressBar rewardProgressBar,rewardCompletedProgressBar;
         private ImageButton rewardMoreBtn;
+        private Button buyRewardBtn;
         private View view;
         public RewardViewHolder(View v) {
             super(v);
@@ -66,29 +72,38 @@ public class RewardAdapter extends RecyclerView.Adapter<RewardAdapter.RewardView
             rewardProgressBar = v.findViewById(R.id.reward_progress);
             rewardCompletedProgressBar=v.findViewById(R.id.reward_progress_completed);
             rewardMoreBtn=v.findViewById(R.id.more_btn_reward);
+            buyRewardBtn=v.findViewById(R.id.buy_btn_reward_item);
 
         }
 
-        public void updateReward(final Reward reward) {
+        public void updateReward(final RewardModel reward) {
             nameTextView.setText(reward.getName());
             priceTextView.setText(reward.getPrice()+" €");
-            percentTextView.setText(reward.getPercent()+"%");
             statusTextView.setText(reward.getStatus());
-            if(reward.getPercent()==100){
+            if(reward.getIsBought()){
+                rewardCompletedProgressBar.setVisibility(View.VISIBLE);
                 rewardProgressBar.setVisibility(View.GONE);
-                rewardCompletedProgressBar.setProgress(reward.getPercent());
+                percentTextView.setText("100%");
+                rewardCompletedProgressBar.setProgress(100);
+                statusTextView.setText(application.getResources().getString(R.string.bought));
             }
             else{
+                if(reward.getPercent()==100){
+                    statusTextView.setText(application.getResources().getString(R.string.available));
+                }
+                rewardProgressBar.setVisibility(View.VISIBLE);
                 rewardCompletedProgressBar.setVisibility(View.GONE);
+                percentTextView.setText(reward.getPercent()+"%");
                 rewardProgressBar.setProgress(reward.getPercent());
             }
-            rewardMoreBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    rewardActionInterface.onRewardClick(v,reward);
-                }
-            });
-
+            if(reward.getIsBought()){
+                buyRewardBtn.setEnabled(false);
+            }
+            else{
+                buyRewardBtn.setEnabled(true);
+            }
+            rewardMoreBtn.setOnClickListener(v -> rewardActionInterface.onRewardClick(v,reward));
+            buyRewardBtn.setOnClickListener(v -> rewardActionInterface.onBuyRewardClick(reward));
         }
     }
 }

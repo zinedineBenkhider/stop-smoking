@@ -1,6 +1,7 @@
 package com.stop.smoking.home;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageButton;
 import androidx.appcompat.widget.Toolbar;
@@ -13,7 +14,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.stop.smoking.R;
@@ -21,7 +21,6 @@ import com.stop.smoking.home.activity.ProfileActivity;
 import com.stop.smoking.home.fragment.HealthFragment;
 import com.stop.smoking.home.fragment.ProgressFragment;
 import com.stop.smoking.home.fragment.RewardFragment;
-import com.stop.smoking.home.fragment.TrophyFragment;
 
 public class MainActivity extends AppCompatActivity {
     private BottomNavigationView bottom_navigation;
@@ -34,27 +33,26 @@ public class MainActivity extends AppCompatActivity {
         bottom_navigation = findViewById(R.id.bottom_navigation);
         buttonAddReward= findViewById(R.id.btn_new_award_activity_main);
         buttonAddReward.setVisibility(View.GONE);
-        bottom_navigation.setOnNavigationItemSelectedListener(listener);
+        bottom_navigation.setOnItemSelectedListener(listener);
         configureToolbar();
         Fragment fragment = ProgressFragment.newInstance();
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
-        buttonAddReward.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                RewardFragment rewardFragment=(RewardFragment)selectedFragment;
-                rewardFragment.showCreateRewardDialog();
-            }
+        bottom_navigation.setSelectedItemId(R.id.progress_nav_item);
+        buttonAddReward.setOnClickListener(v -> {
+            RewardFragment rewardFragment=(RewardFragment)selectedFragment;
+            rewardFragment.showCreateRewardDialog(null);
         });
     }
 
-    BottomNavigationView.OnNavigationItemSelectedListener listener = new BottomNavigationView.OnNavigationItemSelectedListener() {
+    @Nullable
+    BottomNavigationView.OnItemSelectedListener  listener = new BottomNavigationView.OnItemSelectedListener () {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             buttonAddReward.setVisibility(View.GONE);
             switch (item.getItemId()) {
-                case (R.id.trophy_nav_item):
+     /*           case (R.id.trophy_nav_item):
                     selectedFragment = TrophyFragment.newInstance();
-                    break;
+                    break;*/
                 case (R.id.progress_nav_item):
                     selectedFragment = ProgressFragment.newInstance();
                     break;

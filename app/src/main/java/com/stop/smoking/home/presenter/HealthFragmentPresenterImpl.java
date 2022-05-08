@@ -8,11 +8,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HealthFragmentPresenterImpl implements HealthFragmentContract.HealthFragmentPresenter {
-
+    private ProfileRepository mProfileReposistory;
    private HealthFragmentContract.HealthFragmentView mainView;
     public HealthFragmentPresenterImpl(HealthFragmentContract.HealthFragmentView mainView){
         this.mainView=mainView;
-
     }
 
     @Override

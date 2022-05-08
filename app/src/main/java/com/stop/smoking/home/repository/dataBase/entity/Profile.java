@@ -17,8 +17,9 @@ public class Profile {
     public int yearsOfSmoking;
     public int pricePerPack;
     public String devise;
+    public float moneySpentOnRewards;
 
-    public Profile(@NonNull String id, String quittingDate, int cigarettesPerDay, int cigarettesInPack, int yearsOfSmoking, int pricePerPack,String devise) {
+    public Profile(@NonNull String id, String quittingDate, int cigarettesPerDay, int cigarettesInPack, int yearsOfSmoking, int pricePerPack,String devise,float moneySpentOnRewards) {
         this.id = id;
         this.quittingDate=quittingDate;
         this.cigarettesPerDay=cigarettesPerDay;
@@ -26,6 +27,7 @@ public class Profile {
         this.yearsOfSmoking=yearsOfSmoking;
         this.pricePerPack=pricePerPack;
         this.devise=devise;
+        this.moneySpentOnRewards=moneySpentOnRewards;
     }
 
     @NonNull
@@ -83,5 +85,13 @@ public class Profile {
 
     public void setDevise(String devise) {
         this.devise = devise;
+    }
+
+    public float getMoneySpentOnRewards() {
+        return moneySpentOnRewards;
+    }
+
+    public void setMoneySpentOnRewards(float moneySpentOnRewards) {
+        this.moneySpentOnRewards = moneySpentOnRewards;
     }
 }

@@ -7,7 +7,7 @@
     <string name="msg_no_trophy">No trophy</string>
     <string name="profile">Profile</string>
     <string-array name="days">
-        <item>2 days</item>
+        <item >2 days</item>
         <item>3 days</item>
         <item>4 days</item>
         <item>5 days</item>
@@ -24,14 +24,17 @@
     </string-array>
     <string-array name="rewardMenu">
         <item name="edit">Edit</item>
+        <item name="cancelPurchase">Cancel purchase</item>
+        <item name="delete">Delete</item>
+    </string-array>
+    <string-array name="miniRewardMenu">
+        <item name="edit">Edit</item>
         <item name="delete">Delete</item>
     </string-array>
     <string-array name="devises">
-        <item name="AED">AED - Dirham des Emarates</item>
-        <item name="ARS">ARS - Peso argentin</item>
-        <item name="DA">Dollar australien</item>
-        <item name="EUR">EUR - EURO</item>
-        <item name="GBP">GBP - Livre britanique</item>
+        <item name="DA">Dollar</item>
+        <item name="EUR">EUR</item>
+        <item name="GBP">GBP</item>
     </string-array>
     <string-array name="positive_messages">
         <item name="one">I choose a healthy life!</item>
@@ -64,4 +67,12 @@
     <string name="price">Price</string>
     <string name="cancel">Cancel</string>
     <string name="save">Save</string>
+    <string name="date_stopping">Date stopping</string>
+    <string name="time_stopping">Time stopping</string>
+    <string name="buy">Buy</string>
+    <string name="not_enough_money">Not enough money</string>
+    <string name="available">Available</string>
+    <string name="bought">Bought</string>
+    <string name="one_week">1 Week</string>
+    <string name="two_week">2 Weeks</string>
 </resources>

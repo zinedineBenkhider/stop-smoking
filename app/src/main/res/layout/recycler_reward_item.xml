@@ -106,7 +106,7 @@
             android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Achat"
+            android:text="@string/buy"
             android:backgroundTint="@color/white"
             android:textColor="@color/colorPrimary"
             >
